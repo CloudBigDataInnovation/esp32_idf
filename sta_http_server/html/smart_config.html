@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Smart Config</h1>
+
+<form action="/action_page.php">
+  <label>SSID:</label>
+  <input type="text" id="ssid" name="ssid"><br><br>
+  <label>Password:</label>
+  <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+  <input type="button" value="Submit" onclick="post()"/>
+</form>
+<script>
+function post() {
+    var ssid = document.getElementById('ssid')
+    var password = document.getElementById('pwd')
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "/post_ssid_password", true);
+    xhttp.send(ssid.value);
+    xhttp.open("POST", "/post_ssid_password", true);
+    xhttp.send(password.value);
+}
+var xhttp = new XMLHttpRequest();
+xhttp.open("POST", "/post_ssid_password", true);
+xhttp.send(ssid.value);
+xhttp.send
+
+</script>
+</body>
+</html>
